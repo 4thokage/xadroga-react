@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {API_URL} from '../components/Utils/XadrogaConstants';
+import {API_ROOT} from '../components/Shared/XadrogaConstants';
 
 
 // Sends a post request when a user signs in using google
@@ -7,7 +7,7 @@ class GoogleAuthService {
 
 
     signIn(idToken) {
-        return axios.post(API_URL + 'signin/google', {
+        return axios.post(API_ROOT + 'signin/google', {
             idToken
         }).then(res => {
                 if (res.data.success){

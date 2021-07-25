@@ -14,7 +14,7 @@ import PrivateRoute from '../components/private/private';
 import {Provider} from "react-redux";
 
 import { createStore } from "redux";
-import rootReducers from "../store/reducer/index";
+import rootReducers from "../store/reducers/index";
 
 const store = createStore(rootReducers);
 

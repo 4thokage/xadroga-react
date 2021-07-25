@@ -1,64 +1,35 @@
-import axios from 'axios';
-import authHeader from './auth.header';
+import {LOCAL_STORAGE_USER, LOGIN_URL, REGISTER_URL} from '../components/Shared/XadrogaConstants';
+import axios from "axios";
 
-import {API_URL} from '../components/Utils/XadrogaConstants';
+const register = (name, email, password) => {
+  return axios.post(REGISTER_URL, {
+    name,
+    email,
+    password,
+  });
+};
 
-
-class AuthService {
-  register(fullname, email, username, password) {
-    return axios.post(API_URL + 'register', {
-      fullname,
+const login = (email, password) => {
+  return axios
+    .post(LOGIN_URL, {
       email,
-      username,
-      password
+      password,
     })
-      .then(res => {
-        if (res.data.success)
-          localStorage.setItem('user', JSON.stringify(res.data));
-        return res.data;
-      });
-  }
+    .then((response) => {
+      if (response.data.token) {
+        localStorage.setItem(LOCAL_STORAGE_USER, JSON.stringify(response.data));
+      }
 
-  login(email, password) {
-    return axios
-      .post(API_URL + 'auth/login', {
-        email,
-        password
-      })
-      .then(res => {
-        if (res.data.success)
-          localStorage.setItem('user', JSON.stringify(res.data));
-        return res.data;
-      }).catch(error => {
-        console.log(error);
-      });
-  }
+      return response.data;
+    });
+};
 
-  logout() {
-    localStorage.removeItem('user');
-  }
+const logout = () => {
+  localStorage.removeItem(LOCAL_STORAGE_USER);
+};
 
-
-  confirm(userId) {
-    return axios.post(API_URL + 'confirm', {
-      userId
-    }).then(res => res.data);
-  }
-
-  changePassword(oldPassword, newPassword, userId) {
-
-    return axios.put(API_URL + 'update-pswd', {
-      oldPassword,
-      newPassword,
-      userId
-    }, {
-      headers: authHeader()
-    }).then(res => res.data);
-  }
-
-  getCurrentUser() {
-    return JSON.parse(localStorage.getItem('user'));
-  }
-}
-
-export default new AuthService();
+export default {
+  register,
+  login,
+  logout,
+};
