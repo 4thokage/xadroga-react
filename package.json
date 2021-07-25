@@ -1,0 +1,67 @@
+{
+  "name": "xadroga-client",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --coverage --watchAll=false",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@lottiefiles/react-lottie-player": "^3.3.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.1.9",
+    "aes256": "^1.1.0",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.1",
+    "email-validator": "^2.0.4",
+    "howler": "^2.2.1",
+    "node-pre-gyp": "^0.17.0",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.0",
+    "react-chessground": "^1.5.0",
+    "react-content-loader": "^6.0.3",
+    "react-dom": "^17.0.2",
+    "react-fade-in": "^2.0.1",
+    "react-google-login": "^5.2.2",
+    "react-player": "^2.9.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.4",
+    "react-timer-hook": "^3.0.3",
+    "react-transition-group": "^4.4.1",
+    "react-validation": "^3.0.7",
+    "react-vanilla-tilt": "^1.0.0",
+    "redux": "^4.1.0",
+    "simple-peer": "^9.11.0",
+    "socket.io-client": "^4.1.2",
+    "styled-components": "^5.3.0",
+    "validator": "^13.6.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "author": "Xadrogados",
+  "license": "GPL-3.0+",
+  "readme": "ERROR: No README data found!",
+  "_id": "xadroga-client@1.0.0",
+  "devDependencies": {
+    "jest-canvas-mock": "^2.3.1"
+  }
+}
