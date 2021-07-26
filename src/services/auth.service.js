@@ -1,5 +1,8 @@
-import {LOCAL_STORAGE_USER, LOGIN_URL, REGISTER_URL} from '../components/Shared/XadrogaConstants';
+import {API_ROOT, LOCAL_STORAGE_USER} from '../components/Shared/XadrogaConstants';
 import axios from "axios";
+
+const LOGIN_URL = API_ROOT + "/auth/login";
+const REGISTER_URL = API_ROOT + "/users";
 
 const register = (name, email, password) => {
   return axios.post(REGISTER_URL, {

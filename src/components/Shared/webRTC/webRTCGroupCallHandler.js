@@ -37,7 +37,7 @@ export const connectWithMyPeer = () => {
 export const createNewGroupCall = () => {
   groupCallHost = true;
   wss.registerGroupCall({
-    username: store.getState().dashboard.username,
+    username: store.getState().auth.user.name,
     peerId: myPeerId
   });
 

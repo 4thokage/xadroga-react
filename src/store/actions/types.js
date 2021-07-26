@@ -14,5 +14,3 @@ export const ADD_CHANNEL = 'ADD_CHANNEL';
 export const CHANGE_CHANNEL = 'CHANGE_CHANNEL';
 export const RECEIVE_CHANNEL = 'RECEIVE_CHANNEL';
 
-
-export const CHANGE_TAB = 'CHANGE_TAB';

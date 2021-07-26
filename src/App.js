@@ -55,7 +55,7 @@ function App() {
           </Link>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to={"/home"} className="nav-link">
+              <Link to={"/play"} className="nav-link">
                 Play
               </Link>
             </li>
@@ -65,7 +65,7 @@ function App() {
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link to={"/profile"} className="nav-link">
-                  {currentUser.username}
+                  {currentUser.name}
                 </Link>
               </li>
               <li className="nav-item">
